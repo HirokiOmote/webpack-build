@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  text-align: center;
+  text-decoration: underline;
+
+}
+
+h2 {
+  text-decoration: none;
+}
+
+p {
+  font-size: 14px;
+}
