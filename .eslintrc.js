@@ -16,7 +16,8 @@ module.exports = {
   'rules': {
     'arrow-parens': 0,
     'generator-star-spacing': 0,
-    "semi": "error",
-    'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0
+    'indent': [2, 2],
+    'no-var': 2,
+    'semi': [2, 'always'],
   }
 }
