@@ -6,9 +6,7 @@ import glob from 'glob';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
 import { config } from '../package';
 
-let ejsPath = [config.ejs];
-ejsPath = config.ejs;
-
+const ejsPath = [] = config.ejs;
 const { input, output } = ejsPath;
 const files = glob.sync(`${path.resolve(input)}/**/!(_)*.+(ejs|htm|html)`);
 const entry = fromPairs(

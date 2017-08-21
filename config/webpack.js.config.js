@@ -7,9 +7,7 @@ import glob from 'glob';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
 import {config} from '../package';
 
-let jsPath = [config.js];
-jsPath = config.js;
-
+const jsPath = [] = config.js;
 const {input, output} = jsPath;
 const files = glob.sync(`${path.resolve(input)}/**/!(_)*.js`);
 const entry = fromPairs(files.map(filePath => [

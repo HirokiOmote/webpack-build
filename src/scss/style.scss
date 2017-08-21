@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+@import "~reset-css/reset";
+
 main {
   display: flex;
   flex-direction: column;
@@ -10,7 +12,6 @@ main {
 h1 {
   text-align: center;
   text-decoration: underline;
-
 }
 
 h2 {
@@ -18,5 +19,8 @@ h2 {
 }
 
 p {
-  font-size: 14px;
+  font: {
+    size: 40px;
+    family: helvetica, sans-serif;
+  }
 }

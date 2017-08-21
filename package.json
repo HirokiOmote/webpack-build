@@ -39,9 +39,11 @@
     "glob": "^7.1.1",
     "lodash.frompairs": "^4.0.1",
     "node-sass": "^4.5.0",
+    "postcss-loader": "^2.0.6",
     "raw-loader": "^0.5.1",
     "sass-loader": "^6.0.6",
-    "webpack": "^3.3.0"
+    "stylelint-webpack-plugin": "^0.9.0",
+    "url-loader": "^0.5.9"
   },
   "private": true,
   "scripts": {
@@ -49,13 +51,20 @@
     "copy": "cpx 'src/**/*.{png,jpg,gif,svg,woff,eot,ttf}' './public' --verbose --update --watch",
     "clean": "rimraf ./public",
     "server": "browser-sync start --config bs-config.js",
+    "server2": "webpack-dev-server",
     "start": "webpack --watch & npm run server & npm run copy"
   },
   "dependencies": {
     "browser-sync": "^2.18.12",
     "cpx": "^1.5.0",
+    "ejs": "^2.5.7",
     "eslint": "^4.2.0",
-    "postcss-loader": "^2.0.6",
-    "url-loader": "^0.5.9"
+    "file-loader": "^0.11.2",
+    "nodemon": "^1.11.0",
+    "reset-css": "^2.2.1",
+    "stylelint": "^8.0.0",
+    "stylelint-config-standard": "^17.0.0",
+    "webpack": "^3.3.0",
+    "webpack-dev-server": "^2.7.1"
   }
 }

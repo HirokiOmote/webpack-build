@@ -3,12 +3,11 @@
 import path from 'path';
 import fromPairs from 'lodash.frompairs';
 import glob from 'glob';
+import StyleLintPlugin from 'stylelint-webpack-plugin';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
 import { config } from '../package.json';
 
-let sassPath = [config.sass];
-sassPath = config.sass;
-
+const sassPath = [] = config.sass;
 const { input, output } = sassPath;
 const files = glob.sync(`${path.resolve(input)}/**/!(_)*.s[ac]ss`);
 const entry = fromPairs(
@@ -35,7 +34,7 @@ export default {
       {
         test: /\.s[ac]ss$/,
         exclude: /node_modules/,
-        loader: ExtractTextPlugin.extract('css-loader!postcss-loader!sass-loader'),
+        loader: ExtractTextPlugin.extract('css-loader?url=false!postcss-loader!sass-loader'),
       },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
@@ -45,6 +44,9 @@ export default {
   },
 
   plugins: [
+    new StyleLintPlugin({
+      configFile: '.stylelintrc'
+    }),
     new ExtractTextPlugin('[name].css')
   ],
 }
